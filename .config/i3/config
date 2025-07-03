@@ -61,6 +61,13 @@ bindsym $mod+Return exec i3-sensible-terminal
 # kill focused window
 bindsym $mod+q kill
 
+#set gaps to window
+gaps inner 10
+gaps outer 5
+
+# disable title bar
+for_window [class="^.*"] border pixel 0
+
 # start dmenu (a program launcher)
 bindsym $mod+d exec --no-startup-id dmenu_run
 # A more modern dmenu replacement is rofi:
