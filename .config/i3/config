@@ -35,7 +35,24 @@ exec --no-startup-id picom
 # start polybar
 exec --no-startup-id $HOME/.config/polybar/launch.sh
 
+#screenshot
 bindsym $mod+Shift+P exec spectacle
+
+# rofi with custom theme
+bindsym $mod+D exec rofi -show drun -theme ~/.config/rofi/evarch.rasi
+
+# i3 colored border + add border
+
+for_window [class="^.*"] border pixel 5
+
+# class                 border  backgr. text    indicator child_border
+client.focused          #DD1C1C #DD1C1C #ffffff #DD1C1C   #DD1C1C
+client.focused_inactive #580B0B #580B0B #ffffff #580B0B   #580B0B
+client.unfocused        #682323 #682323 #888888 #682323   #682323
+client.urgent           #2f343a #900000 #ffffff #900000   #900000
+client.placeholder      #000000 #0c0c0c #ffffff #000000   #0c0c0c
+
+client.background       #ffffff
 
 # Start XDG autostart .desktop files using dex. See also
 # https://wiki.archlinux.org/index.php/XDG_Autostart
@@ -75,17 +92,6 @@ bindsym $mod+q kill
 #set gaps to window
 gaps inner 10
 gaps outer 5 
-
-# disable title bar
-for_window [class="^.*"] border pixel 0
-
-# start dmenu (a program launcher)
-bindsym $mod+d exec --no-startup-id dmenu_run
-# A more modern dmenu replacement is rofi:
-# bindcode $mod+40 exec "rofi -modi drun,run -show drun"
-# There also is i3-dmenu-desktop which only displays applications shipping a
-# .desktop file. It is a wrapper around dmenu, so you need that installed.
-# bindcode $mod+40 exec --no-startup-id i3-dmenu-desktop
 
 # change focus
 bindsym $mod+j focus left
