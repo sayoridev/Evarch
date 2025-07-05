@@ -14,6 +14,9 @@ set $mod Mod4
 # fix open with dolphin
 exec --no-startup-id export XDG_MENU_PREFIX=plasma- && kbuildsycoca6
 
+# launch dolphin
+bindsym $mod+e exec dolphin
+
 # Font for window titles. Will also be used by the bar unless a different font
 # is used in the bar {} block below.
 font pango:monospace 8
@@ -37,6 +40,10 @@ exec --no-startup-id $HOME/.config/polybar/launch.sh
 
 #screenshot
 bindsym $mod+Shift+P exec spectacle
+
+# i3lock
+bindsym $mod+l exec i3lock -B sigma --clock --ringwrong-color E5D4DC --insidewrong-color=ffffff22 --inside-color=7D1B1B80 --line-color=CC0000 --ring-color=3D0000 --keyhl-color=DCD1D1 --verif-color=785E5C --insidever-color=ffffff00 --ringver-color=9F5A5A --date-color=ffffff --time-color=EAD1DC
+
 
 # rofi with custom theme
 bindsym $mod+D exec rofi -show drun -theme ~/.config/rofi/evarch.rasi
@@ -93,23 +100,11 @@ bindsym $mod+q kill
 gaps inner 10
 gaps outer 5 
 
-# change focus
-bindsym $mod+j focus left
-bindsym $mod+k focus down
-bindsym $mod+l focus up
-bindsym $mod+ograve focus right
-
 # alternatively, you can use the cursor keys:
 bindsym $mod+Left focus left
 bindsym $mod+Down focus down
 bindsym $mod+Up focus up
 bindsym $mod+Right focus right
-
-# move focused window
-bindsym $mod+Shift+j move left
-bindsym $mod+Shift+k move down
-bindsym $mod+Shift+l move up
-bindsym $mod+Shift+ograve move right
 
 # alternatively, you can use the cursor keys:
 bindsym $mod+Shift+Left move left
@@ -129,7 +124,7 @@ bindsym $mod+f fullscreen toggle
 # change container layout (stacked, tabbed, toggle split)
 bindsym $mod+s layout stacking
 bindsym $mod+w layout tabbed
-bindsym $mod+e layout toggle split
+
 
 # toggle tiling / floating
 bindsym $mod+Shift+space floating toggle
