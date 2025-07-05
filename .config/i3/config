@@ -12,7 +12,7 @@
 set $mod Mod4
 
 # fix open with dolphin
-exec --no-startup-id export XDG_MENU_PREFIX=plasma- && kbuildsycoca6
+exec --no-startup-id XDG_MENU_PREFIX=plasma- && kbuildsycoca6
 
 # launch dolphin
 bindsym $mod+e exec dolphin
