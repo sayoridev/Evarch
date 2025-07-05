@@ -1,0 +1,16 @@
+/* ~/.config/gtk-4.0/gtk.css */
+* {
+    background-color: #1a0a0b;
+    color: #f4e7e8;
+}
+
+button {
+    background-color: #871E23;
+    color: #ffffff;
+    border-radius: 6px;
+}
+
+entry {
+    background-color: #2c1517;
+    color: #f4e7e8;
+}
